@@ -21,5 +21,13 @@ var addTwoNumbers = function(l1, l2) {
     	if (l1 !== null) l1 = l1.next;
         if (l2 !== null) l2 = l2.next;
     } 
-    return dummyList.next;
+    // return dummyList.next;
+    
+    //put each element of the linked list into an array
+    var arr =[];
+    for(var i = dummyList.next; i !== null; i = i.next){
+        arr.push(i.val);
+    }
+    // console.log(arr);
+    return arr;
 };
