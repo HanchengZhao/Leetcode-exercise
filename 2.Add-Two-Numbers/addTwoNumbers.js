@@ -16,7 +16,7 @@
  }
  
 var addTwoNumbers = function(l1, l2) {
-    var dummyList = new ListNode(0)
+    var dummyList = new ListNode(0); // when refering to a linked list, we often refer to its node 
     var sumList = dummyList;
     var carry = 0, x, y,  sum; //x for value in l1, y for that in l2
     
@@ -34,7 +34,7 @@ var addTwoNumbers = function(l1, l2) {
     // return dummyList.next;
     
     
-    //put each element of the linked list into an array
+    //put each element of the linked list into an array to meet Leetcode requirement
     var arr =[];
     for(var i = dummyList.next; i !== null; i = i.next){
         arr.unshift(i.next);
