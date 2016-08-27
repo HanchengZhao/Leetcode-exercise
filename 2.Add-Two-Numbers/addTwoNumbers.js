@@ -33,7 +33,6 @@ var addTwoNumbers = function(l1, l2) {
     // console.log(dummyList.next);
     // return dummyList.next;
     
-    
     //put each element of the linked list into an array to meet Leetcode requirement
     var arr =[];
     for(var i = dummyList.next; i !== null; i = i.next){
