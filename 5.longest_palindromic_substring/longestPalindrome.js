@@ -21,7 +21,7 @@ var longestPalindrome = function(s) {
         }
     }
     return longestPalin;
-};//takes O(n^3);
+};//takes O(n^2);
 
 // var a = "abcbafasdf";
 // longestPalindrome(a);
