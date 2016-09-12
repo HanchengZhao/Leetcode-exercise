@@ -1,6 +1,8 @@
 /**
  * @param {number[]} nums
  * @return {number}
+ * @author HanchengZhao
+ *
  */
 var removeDuplicates = function(nums) {
     var dummy = nums[0];
