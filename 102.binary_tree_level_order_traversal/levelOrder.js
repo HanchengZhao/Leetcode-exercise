@@ -9,38 +9,35 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
-var levelOrder = function(root) {
-    var number = [];//result array
-    if(root === null) return number;
+var levelOrderBottom = function(root) {
+    var result = [];
+    if(root === null) return result;
     
-    var temp = [];
     var curLevelCount = 1;
     var nextLevelCount = 0;
+    var temp =[];
     var queue = [];
     queue.push(root);
     while(queue.length !== 0){
+        curLevelCount--;
         var node = queue.shift();
         temp.push(node.val);
-        curLevelCount--;
-        
-        if(node.left){
+    
+        if(node.left !== null){
             queue.push(node.left);
             nextLevelCount++;
         }
-        
-        if(node.right){
+        if(node.right !== null){
             queue.push(node.right);
             nextLevelCount++;
         }
-        
         if(curLevelCount === 0){
-            number.push(temp);
+            result.unshift(temp);
             curLevelCount = nextLevelCount;
-            nextLevelCount = 0;//!
+            nextLevelCount = 0;
             temp = [];
         }
         
     }
-    return number;
- 
+    return result;
 };
