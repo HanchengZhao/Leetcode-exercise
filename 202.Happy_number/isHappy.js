@@ -20,5 +20,3 @@ var isHappy = function(n) {
 };
 
 console.log(isHappy(7));
-
-//https://discuss.leetcode.com/topic/12587/my-solution-in-c-o-1-space-and-no-magic-math-property-involved

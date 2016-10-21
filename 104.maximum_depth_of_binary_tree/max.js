@@ -11,8 +11,6 @@
  */
 var maxDepth = function(root) {//bfs
     if(root === null) return 0;
-    
-    var temp = [];
     var queue = [];
     var count = 0;
     queue.push(root);

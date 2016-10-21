@@ -10,11 +10,11 @@ var hasPathSum = function(root, sum) {
         if(node.left === null && node.right === null && value === 0){
             return true;
         }
-        if(node.left !== null &&  value > 0){
+        if(node.left !== null ){
             node_queue.push(node.left);
             value_queue.push(value - node.left.val);
         }
-        if(node.right !== null &&  value > 0){
+        if(node.right !== null ){
             node_queue.push(node.right);
             value_queue.push(value - node.right.val);
         }
@@ -22,9 +22,3 @@ var hasPathSum = function(root, sum) {
     return false;
     
 };
-// var hasPathSum = function(root, sum) {
-//     if(root === null || sum <= 0) return false;
-//     if(root.val === sum && root.left === null && root.right === null) return true;
-//     hasPathSum(root.left, sum-root.val);
-//     hasPathSum(root.right, sum-root.val);
-// };

@@ -13,7 +13,7 @@ var isBalanced = function(root) {
     if(root === null) return true;
     var dif = Math.abs(height(root.left)-height(root.right));
     if (dif > 1) return false;
-    return isBalanced(root.left)&&isBalanced(root.right);
+    return isBalanced(root.left)&&isBalanced(root.right);//recursion for subtree
     
 };
 
