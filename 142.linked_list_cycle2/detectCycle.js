@@ -22,6 +22,7 @@ var detectCycle = function(head) {
                 head = head.next;
                 slow = slow.next;
             }
+            return head;
         }
     }
     return null;
