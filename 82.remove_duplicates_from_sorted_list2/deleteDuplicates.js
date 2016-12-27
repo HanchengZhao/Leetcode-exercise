@@ -19,9 +19,9 @@ var deleteDuplicates = function(head) {
         while (cur.next !== null && cur.val === cur.next.val) { //remove the duplicates from start
             cur = cur.next;
         }
-        if(pre.next == cur){
+        if(pre.next == cur){//means no duplicate removed
             pre = pre.next;
-        }else{
+        }else{//duplicates exist
             pre.next = cur.next;
         }
         cur = cur.next;

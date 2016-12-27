@@ -22,7 +22,7 @@ var topKFrequent = function(nums, k) {
         bucket[freq].push(num);
     });
     
-    var result = [];
+    var result = []; 
     for(var i = bucket.length-1; i>0 && k>0; i--){
         if(bucket[i] !== undefined){
             result = result.concat(bucket[i]);
