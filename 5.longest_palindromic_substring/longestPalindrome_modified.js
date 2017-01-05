@@ -10,6 +10,7 @@ function expandAroundCenter(s,left,right){
     }
     return R - L - 1;
 }
+
 var longestPalindrome = function(s) {
     var start = 0, end = 0;
     for(var i = 0; i < s.length; i++){
