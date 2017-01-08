@@ -36,7 +36,7 @@ var canFinish = function(numCourses, prerequisites) {
         visited[i] = 1;
         return true;
     };
-
+    // # visit all the neighbours
     for(let i = 0; i < numCourses; i++){
         if(!dfs(graph, visited, i)){
             return false;
