@@ -20,12 +20,8 @@ public class Solution {
         //copy the reference
         node = head;
         while (node != null) {
-            if (node.next != null) {
-                map.get(node).next = node.next;
-            }
-            if (node.random != null) {
-                map.get(node).random = node.random;
-            }
+            map.get(node).next = map.get(node.next); //do not point to original list
+            map.get(node).random = map.get(node.random);
             node = node.next;
         }
         return map.get(head);
