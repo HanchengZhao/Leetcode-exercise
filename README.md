@@ -1,3 +1,3 @@
-## Exercise codes on leetcode
- 
-Solutions are mainly in Javascript.
+## Exercise codes on leetcode (some from lintcode)
+
+Solutions are mainly in Javascript and Python.
