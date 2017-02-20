@@ -10,8 +10,7 @@ class Solution(object):
         dic = {}
         for i in range(len(nums)):
             if nums[i] in dic:
-                return [i,nums[i]]
+                return [i,dic[nums[i]]]
             else:
                 compliment = target - nums[i]
-                dic[nums[i]] = i
-            
+                dic[compliment] = i
