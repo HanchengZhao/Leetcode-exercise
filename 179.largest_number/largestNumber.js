@@ -14,14 +14,13 @@ var largestNumber = function(nums) {
             return 1;
         }
     });
-    console.log(num);
     var res = num.join("");
+    //remove the 0s on the left
     for(var j of res){
         if (j != "0") break;
         res = res.substring(1);
     }
     return res || "0";
-
 };
 
 console.log(largestNumber([0,0]));

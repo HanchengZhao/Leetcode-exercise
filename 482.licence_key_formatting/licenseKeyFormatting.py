@@ -9,6 +9,7 @@ class Solution(object):
         if not res:
             return ""
         count, i = 1, len(res)-1
+        #start from the end
         while i:
             if count < K:
                 count +=1

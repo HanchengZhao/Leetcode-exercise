@@ -26,5 +26,6 @@ class Solution(object):
                 k -= len(bucket[i])
             i -= 1
         return result
+
 s = Solution()
 print s.topKFrequent([1,1,1,2,2,3], 2)

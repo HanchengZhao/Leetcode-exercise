@@ -23,6 +23,7 @@ class Solution(object):
 
     def dfs(self, root):
         if not root:
+            # set min=inf and max=-inf to initialize
             return Subtree(0, 0, float('inf'), float('-inf'))
         left = self.dfs(root.left)
         right = self.dfs(root.right)

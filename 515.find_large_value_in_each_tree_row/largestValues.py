@@ -6,24 +6,27 @@
 #         self.right = None
 
 class Solution(object):
-    def findBottomLeftValue(self, root):
+    def largestValues(self, root):
         """
         :type root: TreeNode
-        :rtype: int
+        :rtype: List[int]
         """
-        if root == None:
-            return None
+        if not root:
+            return []
         queue = []
+        res = []
         queue.append(root)
-        while len(queue):
-            #the first node on each layer is always the leftmost
-            leftmost = queue[0].val
+        while queue:
             size = len(queue)
+            temp = float('-inf')
             while size:
                 node = queue.pop(0)
+                temp = max(temp, node.val)
                 if node.left:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
                 size -= 1
-        return leftmost
+            res.append(temp)
+
+        return res

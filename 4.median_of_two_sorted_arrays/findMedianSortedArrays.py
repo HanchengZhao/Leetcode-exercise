@@ -19,6 +19,7 @@ class Solution:
             return self.findKth(A[:i],B[j:],i)
         else:
             return self.findKth(A[i:],B[:j],j)
+
 if __name__ == '__main__':
     s = Solution()
     print s.findMedianSortedArrays([],[2])

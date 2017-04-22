@@ -6,24 +6,28 @@
 #         self.right = None
 
 class Solution(object):
-    def findBottomLeftValue(self, root):
+    def minDepth(self, root):
         """
         :type root: TreeNode
         :rtype: int
         """
         if root == None:
-            return None
+            return 0
         queue = []
+        count = 0
         queue.append(root)
-        while len(queue):
-            #the first node on each layer is always the leftmost
-            leftmost = queue[0].val
+        while len(queue) != 0:
+            #nodes in each level
             size = len(queue)
-            while size:
+            while(size):
                 node = queue.pop(0)
-                if node.left:
+                if (node.left == None and node.right == None):
+                    return count+1
+                if (node.left != None):
                     queue.append(node.left)
-                if node.right:
+                if (node.right != None):
                     queue.append(node.right)
                 size -= 1
-        return leftmost
+            count += 1
+
+        return count

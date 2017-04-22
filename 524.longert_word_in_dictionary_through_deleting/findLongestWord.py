@@ -5,9 +5,11 @@ class Solution(object):
         :type d: List[str]
         :rtype: str
         """
+        # instead of deleting characters, check if element in d is a subsequence
         d.sort()
         longest = ""
         for i in d:
+            # initialize two pointers to traverse s and elements in d
             spointer = 0
             dpointer = 0
             while dpointer < len(i) and spointer < len(s):

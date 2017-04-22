@@ -12,17 +12,16 @@
 var levelOrderBottom = function(root) {
     var result = [];
     if(root === null) return result;
-    
+
     var curLevelCount = 1;
     var nextLevelCount = 0;
-    var temp =[];
-    var queue = [];
+    var temp =[];//value array
+    var queue = [];//node array
     queue.push(root);
     while(queue.length !== 0){
         curLevelCount--;
         var node = queue.shift();
         temp.push(node.val);
-    
         if(node.left !== null){
             queue.push(node.left);
             nextLevelCount++;
@@ -37,7 +36,7 @@ var levelOrderBottom = function(root) {
             nextLevelCount = 0;
             temp = [];
         }
-        
+
     }
     return result;
 };

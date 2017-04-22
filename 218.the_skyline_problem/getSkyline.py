@@ -20,7 +20,7 @@ class Solution(object):
             #add starting building
             while i < len(buildings) and buildings[i][0]==x:
                 #in order to maintain max-heap, height is changed to negative
-                heapq.heappush((-buildings[i][2], buildings[i][1]))
+                heapq.heappush(activeheap, (-buildings[i][2], buildings[i][1]))
                 i += 1
             #y is either 0 or max height
             y = 0 if not activeheap else -activeheap[0][0]

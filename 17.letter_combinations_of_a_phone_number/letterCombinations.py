@@ -1,5 +1,6 @@
 class Solution(object):
     def cartesion(self, x, y):
+        # print "x: " + str(x) , "y: " + str(y)
         combined = []
         for i in x:
             for j in y:
@@ -17,4 +18,4 @@ class Solution(object):
             result = reduce(self.cartesion, map(lambda x:dict[int(x)], digits))
         return result
 s = Solution()
-print s.letterCombinations("2")
+print s.letterCombinations("1234")

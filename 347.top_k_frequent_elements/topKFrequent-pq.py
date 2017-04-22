@@ -13,8 +13,7 @@ class Solution(object):
                 dic[num] = 1
             else:
                 dic[num] += 1
-        print heapq.nlargest(k, dic, key = dic.get)
-        print dic
+        return heapq.nlargest(k, dic, key = dic.get)
 if __name__ == '__main__':
     s = Solution()
     s.topKFrequent([1,1,1,1,1,3,3,3,3,4], 2)

@@ -23,7 +23,7 @@ var helper = function(postIndex, inStart, inEnd, inorder, postorder){
     if (postIndex < 0 || inStart > inEnd) {
         return null;
     }
-    var root = new TreeNode(postorder[postIndex]);
+    var root = new TreeNode(postorder[postIndex]);//use the postIndex
     var inIndex = inorder.indexOf(root.val);
 
     root.right = helper(postIndex-1, inIndex+1, inEnd, inorder, postorder);
