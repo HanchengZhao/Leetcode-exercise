@@ -7,7 +7,7 @@ v1 = [1, 2]
 v2 = [3, 4, 5, 6]
 By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: [1, 3, 2, 4, 5, 6].
 '''
-
+from collections import deque
 class ZigzagIterator(object):
 
     def __init__(self, v1, v2):
@@ -16,8 +16,8 @@ class ZigzagIterator(object):
         :type v1: List[int]
         :type v2: List[int]
         """
-        self.v1 = v1
-        self.v2 = v2
+        self.v1 = deque(v1)
+        self.v2 = deque(v2)
         self.signal = 1
 
 
@@ -28,10 +28,10 @@ class ZigzagIterator(object):
         if self.hasNext():
             if self.signal == 1 and self.v1:
                 if self.v2: self.signal = 0
-                return self.v1.pop(0)
+                return self.v1.popleft()
             else:#v2
                 self.signal = 1
-                return self.v2.pop(0)
+                return self.v2.popleft()
 
     def hasNext(self):
         """
