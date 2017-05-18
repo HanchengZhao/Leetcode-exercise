@@ -28,15 +28,12 @@ class Solution(object):
         valid = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","A","B","C","D","E","F"]
         Split = address.split(":")
         if len(Split) != 8:
-            print 1
             return False
         for i in Split:
             if len(i) > 4 or i == "":
-                print 2
                 return False
             for char in i:
                 if char not in valid:
-                    print 3
                     return False
         return True
 s = Solution()
