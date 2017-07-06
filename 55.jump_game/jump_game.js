@@ -9,7 +9,6 @@ var canJump = function(nums) {
     for (; i < length && i <= jump_len; i++) {
         jump_len = Math.max(jump_len, nums[i] + i);
     }
-    console.log(i);
     return i == length;
 };
 

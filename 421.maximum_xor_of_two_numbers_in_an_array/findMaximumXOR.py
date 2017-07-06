@@ -12,7 +12,7 @@ class Solution(object):
             mask = mask | (1 << i)
             s = set()
             for num in nums:
-                s.add(num & mask)
+                s.add(num & mask) # store the different result in terms of most significant digits
             temp = maximum | (1 << i)
             for prefix in s:
                 if temp ^ prefix in s:

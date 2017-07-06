@@ -12,7 +12,7 @@ class Solution(object):
                 s_cur += 1
                 p_cur += 1
             # if "*"
-            if p_cur < len(p) and p[p_cur] == "*":
+            elif p_cur < len(p) and p[p_cur] == "*":
                 star = p_cur
                 match = s_cur
                 p_cur += 1
@@ -22,8 +22,10 @@ class Solution(object):
                 p_cur = star+1
             else:
                 return False
+        #if there are "***" at the end of pattern
         while p_cur < len(p) and p[p_cur] == "*":
             p_cur += 1
+        #reach the end
         if p_cur == len(p):
             return True
         else:

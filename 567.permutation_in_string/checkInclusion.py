@@ -15,7 +15,7 @@ class Solution(object):
         window = [0] * 26
         for i in xrange(len(b)):
             window[b[i]] += 1
-            if i > len(a):
+            if i >= len(a):
                 window[b[i-len(a)]] -= 1
             if window == target:
                 return True
