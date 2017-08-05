@@ -11,3 +11,5 @@ class Solution(object):
                 insertIndex += 1
         for j in xrange(insertIndex, len(nums)):
             nums[j] = 0
+# this solution takes up to O(n) in time complexity and O(1) in space, but a little bit more than n, since it
+# traverses the array and move 0s in the end

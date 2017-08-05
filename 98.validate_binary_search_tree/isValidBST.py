@@ -13,7 +13,6 @@ class Solution(object):
         """
         output = []
         self.inOrder(root, output)
-
         for i in range(1, len(output)):
             if output[i] <= output[i-1]:
                 return False
