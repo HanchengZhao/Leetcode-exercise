@@ -15,3 +15,8 @@ class Solution(object):
             if sort[i].end > sort[i+1].start:
                 return False
         return True
+
+## using all and zip
+def canAttendMeetings(self, intervals):
+    intervals.sort(key=lambda i: i.start)
+    return all(i.end <= j.start for i, j in zip(intervals, intervals[1:]))
