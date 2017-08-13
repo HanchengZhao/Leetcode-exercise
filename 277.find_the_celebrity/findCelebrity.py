@@ -3,7 +3,10 @@
 # @param b, person b
 # @return a boolean, whether a knows b
 # def knows(a, b):
-
+'''
+2 pass solution, find the candidate in the first pass and validate it 
+in the second
+'''
 class Solution(object):
     def findCelebrity(self, n):
         """
