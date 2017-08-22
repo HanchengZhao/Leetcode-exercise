@@ -25,6 +25,14 @@ class Solution(object):
             #y is either 0 or max height
             y = 0 if not activeheap else -activeheap[0][0]
             #if y changes
-            if not result or result[-1][1] != y:
+            if not result or result[-1][1] != y: # if there is no previous building or change
                 result.append([x, y])
         return result
+'''
+so the basic idea is:
+step 1: push all the start and end point to the array and sort
+step 2: loop through the array:
+    1.if meet the start point, push (height, end point) to the heap, # putting height in the front to sort
+    2.if meet the end point, check if it is already behind, otherwise
+    3.check the max height everytime add to the result only if y changes
+'''
