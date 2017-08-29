@@ -18,11 +18,11 @@ class Solution(object):
         if isBadVersion(mid):
             if not isBadVersion(mid-1):
                 return mid
-            self.biSearch(i, mid)
+            return self.biSearch(i, mid)
         else:
             if isBadVersion(mid+1):
                 return mid+1
-            self.biSearch(mid, j)
+            return self.biSearch(mid, j)
 
 # this version will have a infinity loop for (1, 2) if 2 is bad
     # def biSearch(self, i, j):  
