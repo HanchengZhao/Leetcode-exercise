@@ -11,13 +11,13 @@ class Solution(object):
         res[0] = res[1] = 1 # initialize
         for i in xrange(1, length):
             if s[i] == "0":
-                if s[i-1] == "1" or s[i-1] == "2":
+                if s[i-1] == "1" or s[i-1] == "2": # valid
                     res[i+1] = res[i-1]
-                else:
+                else: # not valid
                     return 0
             elif s[i-1] != "0" and int(s[i-1: i+1]) <= 26:
                 res[i+1] = res[i-1] + res[i]
-            else:
+            else:# double digits not under 26, then only 1 option
                 res[i+1] = res[i]
         return res[-1]
 '''
