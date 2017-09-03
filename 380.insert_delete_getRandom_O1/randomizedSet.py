@@ -30,7 +30,8 @@ class RandomizedSet(object):
             #exchange the positon of val and last element, then pop
             last, index = self.vals[-1], self.pos[val]
             self.pos[last], self.vals[index] = index, last
-            self.vals.pop(); self.pos.pop(val)
+            self.vals.pop()
+            self.pos.pop(val)
             return True
         else:
             return False
@@ -42,7 +43,11 @@ class RandomizedSet(object):
         """
         return self.vals[random.randint(0, len(self.vals)-1)]
 
-
+'''
+the tricky part is to make remove function O(1), in order to do that,
+swap the element and the last in self.val, and also change index, then pop the last one
+and the index in the dictionary
+'''
 # Your RandomizedSet object will be instantiated and called as such:
 # obj = RandomizedSet()
 # param_1 = obj.insert(val)
