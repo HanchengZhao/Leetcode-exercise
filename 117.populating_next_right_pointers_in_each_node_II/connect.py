@@ -10,20 +10,20 @@ class Solution:
     # @param root, a tree link node
     # @return nothing
     def connect(self, root):
-
         while root:
             head = TreeLinkNode(0)
             cur = head
             #traverse a level
             while root:
                 if root.left:
-                    cur.next = root.left
+                    cur.next = root.left # assign head.next to next level's first node
                     cur = cur.next
                 if root.right:
                     cur.next = root.right
                     cur = cur.next
-                root = root.next
+                root = root.next # move pointer from the same level
             #head.next will always point to the leftmost node in next level
+            #because cur moves itself forward but change the head.next pointer first
             root = head.next
 
 
