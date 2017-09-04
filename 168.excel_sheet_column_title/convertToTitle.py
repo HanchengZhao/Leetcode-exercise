@@ -8,15 +8,10 @@ class Solution(object):
         '''
         eg. 52 = 26^1 * 1 + 26^0 * 26
         '''
-        title = ""
-        log = math.floor(math.log(n))
-        for i in xrange(log,-1,-1):
-            if i == 0 and n == 26:
-                title += "Z"
-            else:
-                num = n / (26^i)
-                title += chr(num - 64)
-        return title
+        if n == 0:
+            return ""
+        right = chr((n - 1) % 26 + ord('A'))
+        return self.convertToTitle((n - 1) / 26) + right
 
 
         #one liner
