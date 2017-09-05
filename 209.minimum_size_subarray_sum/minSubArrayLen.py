@@ -15,7 +15,7 @@ class Solution(object):
                 Sum += nums[j]
                 j += 1
             if Sum >= s: #the while loop can be ended when j > len(nums)
-                res = min(res, j - i) #record minimum length
+                res = min(res, j - i) #record minimum length, j has been added 1, so it is not j-i+1
             Sum -= nums[i]
         if res == sys.maxint:#no match
             return 0
