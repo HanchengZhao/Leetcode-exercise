@@ -15,3 +15,4 @@ class Solution(object):
                     count += 1
             least = min(least, count)
         return least
+# brute force
