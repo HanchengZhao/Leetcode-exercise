@@ -1,6 +1,9 @@
 # it requires us to do it in place, so we can't use extra space here
-# we can do it in 2 passes, the first pass record the count of 0s as right shift
+# we can do it in 2 passes, the first pass record the count of 0s as shifts
 # the second pass put the shifted elements in the right spot and put 0s in the right spot
+# e.g, [1,0,2,3,0,4,5,0] will be extended as [1,0,0,2,3,0,0,4],5,0,0, only the first 8 elememnts
+# fit in the array
+from typing import List
 
 
 class Solution:
