@@ -1,4 +1,7 @@
 # use dp to record days, transactions and stock status
+# time: O(n), space O(n)
+
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if not prices:
