@@ -4,10 +4,9 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        bits = n
         count = 0
-        while bits:
-            if bits & 1:
-                count += 1
-            bits = bits >> 1
+        while n > 0:
+            # this step remove the last 1 in n
+            n = n & (n-1)
+            count += 1
         return count
