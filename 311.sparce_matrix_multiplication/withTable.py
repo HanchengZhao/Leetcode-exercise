@@ -13,7 +13,7 @@ class Solution(object):
         if len(B) != n:
             raise Exception("A's col number is not equal to B's row number")
         k = len(B[0])
-        res = [[0] * k for i in xrange(m)] # A' col num and B' row num
+        res = [[0] * k for i in xrange(m)] # res row num = A' row num,  col num = B' col num
         for i in xrange(n):
             for j in xrange(k):
                 if B[i][j] != 0:

@@ -17,7 +17,7 @@ class Solution(object):
             #if the rect.end < x, the rect has been checked, romove the rect
             while activeheap and activeheap[0][1] <= x:
                 heapq.heappop(activeheap)
-            #add starting building
+            # starting building based on x
             while i < len(buildings) and buildings[i][0]==x:
                 #in order to maintain max-heap, height is changed to negative
                 heapq.heappush(activeheap, (-buildings[i][2], buildings[i][1]))
@@ -34,5 +34,5 @@ step 1: push all the start and end point to the array and sort
 step 2: loop through the array:
     1.if meet the start point, push (height, end point) to the heap, # putting height in the front to sort
     2.if meet the end point, check if it is already behind, otherwise
-    3.check the max height everytime add to the result only if y changes
+    3.check the max height everytime, add to the result only if y changes
 '''

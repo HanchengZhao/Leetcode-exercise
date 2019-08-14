@@ -22,3 +22,14 @@ class Solution(object):
         return res
 s = Solution()
 print s.subsets([1,2,3])
+
+class Solution2(object):
+    def subsets(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        res = [[]]
+        for i in nums:
+            res += [[i] + j for j in res]
+        return res

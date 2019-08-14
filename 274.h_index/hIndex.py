@@ -12,3 +12,7 @@ class Solution(object):
         return hindex
 s = Solution()
 print s.hIndex([3, 0, 6, 1, 5])
+
+'''
+After sorting in descending order, h-index is the length of the largest square in the histogram
+'''

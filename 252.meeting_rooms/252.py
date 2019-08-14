@@ -19,4 +19,4 @@ class Solution(object):
 ## using all and zip
 def canAttendMeetings(self, intervals):
     intervals.sort(key=lambda i: i.start)
-    return all(i.end <= j.start for i, j in zip(intervals, intervals[1:]))
+    return all(i.end <= j.start for i, j in zip(intervals, intervals[1:])) 

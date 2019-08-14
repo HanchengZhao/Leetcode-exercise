@@ -13,14 +13,14 @@ class WordDictionary(object):
         for char in word:
             if char not in cur.children:
                 cur.children[char] = TreeNode(char)
-            cur = cur.children[char]
+            cur = cur.children[char] # skip the existed char
         cur.isWord = True
     
     def search(self, word):
         def find(word, node):
             if not word:
                 return node.isWord
-            char, word = word[0], word[1:]
+            char, word = word[0], word[1:] # first char and the rest 
             if char != '.':
                 return char in node.children and find(word, node.children[char])
             return any(find(word, kid) for kid in node.children.values())

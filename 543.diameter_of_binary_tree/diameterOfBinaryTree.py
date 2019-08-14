@@ -12,15 +12,15 @@ class Solution(object):
         :rtype: int
         """
         self.max = 0
-        self.height(root)
+        self.height(root) # no need to get the return val, only focuses on the process
         return self.max
-
+    # keep track of self.max in the process
     def height(self, root):
         if not root:
             return 0
         leftH = self.height(root.left)
         rightH = self.height(root.right)
-        height = max(leftH, rightH) + 1
-        self.max = max(leftH + rightH, self.max)
+        height = max(leftH, rightH) + 1 
+        self.max = max(leftH + rightH, self.max) # not height
         return height
 # longest path is the sum of left tree height and right tree height

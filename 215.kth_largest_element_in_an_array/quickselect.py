@@ -21,10 +21,11 @@ class Solution(object):
                 left += 1
             while left <= right and nums[right] < pivot:
                 right -= 1
-            # swap left and right
-            nums[left], nums[right] = nums[right], nums[left]
-            left += 1
-            right -= 1
+            if left <= right:
+                # swap left and right
+                nums[left], nums[right] = nums[right], nums[left]
+                left += 1
+                right -= 1
         # left == right here
         if start + k - 1 <= right: # on the larger part
             return self.quickSelect(nums, start, right, k)

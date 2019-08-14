@@ -22,7 +22,7 @@ class Solution(object):
                     res = word
                     length = len(word)
         return res
-
-                
+    
+           
 s = Solution()
 print s.longestWord(["w","wo","wor","worl", "world"])
