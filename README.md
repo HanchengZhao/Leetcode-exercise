@@ -439,8 +439,11 @@ https://leetcode.com/problems/stone-game-ii/discuss/345230/Python-DP-Solution
 
 ## resource
 
-这是一个大神用各种 Python trick 解题的 repo，可供娱乐：
+- 这是一个大神用各种 Python trick 解题的 repo，可供娱乐：
 
-https://github.com/cy69855522/Shortest-LeetCode-Python-Solutions
+  > https://github.com/cy69855522/Shortest-LeetCode-Python-Solutions
+
+- 另一个关于各种 python tricks 的总结：
+  > https://github.com/brennerm/PyTricks
 
 当然 Leetcode 讨论区还会经常见到 `StefanPochmann` 或者 `lee215`这样的大神 Po 一些很秀技的 python 代码，都是学习范本。
