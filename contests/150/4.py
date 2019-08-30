@@ -11,6 +11,4 @@ class Solution:
 
 s = Solution()
 print(s.lastSubstring("abab"))
-print(s.lastSubstring("leetcode"))
-print(s.lastSubstring(
-    "xbylisvborylklftlkcioajuxwdhahdgezvyjbgaznzayfwsaumeccpfwamfzmkinezzwobllyxktqeibfoupcpptncggrdqbkji"))
+pritn(s.lastSubstring("leetcode"))

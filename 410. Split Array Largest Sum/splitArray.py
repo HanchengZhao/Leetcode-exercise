@@ -13,3 +13,8 @@ class Solution:
                     dp[i][j] = min(dp[i][j], max(
                         dp[i-1][k], Sums[j+1] - Sums[k+1]))
         return dp[m][n-1]
+'''
+dp solution
+
+time: O(mn^2)
+'''

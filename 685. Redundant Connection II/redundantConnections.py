@@ -56,7 +56,7 @@ class Solution:
                 if b not in path_from:
                     path_from[b] = a
                 else:
-                    # WATCHOUT: should be the previous visited edge ahead
+                    # WATCHOUT: should put the previous visited edge ahead
                     # so we can skip cand2, otherwise we shall skip cand1
                     return [path_from[b], b], [a, b]
             return None, None

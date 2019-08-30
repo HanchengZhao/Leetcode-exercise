@@ -12,7 +12,6 @@ class Solution:
                     break
                 cc[val] -= 1
                 if cc[val] >= 0 and i == len(w)-1:
-                    print(w, chars, c)
                     l += len(w)
         return l
 
