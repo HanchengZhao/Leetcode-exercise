@@ -17,7 +17,7 @@ class Solution(object):
             nxt = curr.next
             curr.next = prev
             prev = curr
-            curr = nxt
+            curr = nxt  
         return prev
 
 # recursive
@@ -33,3 +33,5 @@ class Solution(object):
         head.next.next = head
         head.next = None
         return p
+        # p is the end node that is passed back level by level
+        # in the process, change the reference

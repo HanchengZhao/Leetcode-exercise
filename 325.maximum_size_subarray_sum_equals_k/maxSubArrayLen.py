@@ -22,12 +22,13 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        prefix = {0 : -1} # key is cumulative and value is starting index, only recording first occurance
+        # fake entry to make sum consistent
+        prefix = {0 : -1} # key is cumulative and value is starting index
         cumulative, longest = 0, 0
         for i, val in enumerate(nums):
             cumulative += val
             if cumulative not in prefix:
-                prefix[cumulative] = i
+                prefix[cumulative] = i #only recording first occurance to make it max
             if cumulative - k in prefix:
                 longest = max(longest, i - prefix[cumulative-k])
         return longest

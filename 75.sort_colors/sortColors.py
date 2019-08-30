@@ -13,7 +13,7 @@ class Solution(object):
                 nums[i] = nums[left]
                 nums[left] = 0
                 left += 1
-                i += 1
+                i += 1 # remember to move forword
             elif nums[i] == 2:
                 nums[i] = nums[right]
                 nums[right] = 2

@@ -18,7 +18,8 @@ class Solution(object):
                             lo += 1
                         while lo < hi and nums[hi - 1] == nums[hi]:
                             hi -= 1
-                        lo += 1
+                        # do not forget to update index
+                        lo += 1 
                         hi -= 1
                     elif nums[lo] + nums[hi] < target:
                         lo += 1

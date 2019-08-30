@@ -11,5 +11,6 @@ class Solution(object):
                 i += 1
         return i
 '''
-almost same idea as 19, but compare one more number
+almost same idea as 19, but compare one more number.abs
+Just go through the numbers and include those in the result that haven't been included twice already.
 '''

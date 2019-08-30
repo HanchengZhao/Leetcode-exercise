@@ -1,6 +1,6 @@
 class TreeNode(object):
     def __init__(self, val):
-        self.children = dict()
+        self.children = dict() #key is char, value is node
         self.isWord = False
         self.val = val
 

@@ -23,4 +23,4 @@ class Solution(object):
             res = str(digit) + res
         if carry == 1: # do not forget the left one
             res = str(carry) + res
-        return res
+        return res 

@@ -18,7 +18,7 @@ class Solution(object):
             return intervals
         res = []
         pos = 0
-        #traverse the list, merge if overlapping
+        #traverse the list, merge if overlapping, insert the newInterval in the end
         for inter in intervals:
             if inter.end < newInterval.start:
                 res.append(inter)

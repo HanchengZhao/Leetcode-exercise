@@ -4,13 +4,13 @@ class Solution(object):
         :type num: int
         :rtype: str
         """
-        lessThan20 = 'One Two Three Four Five Six Seven Eight Nine Ten' \
+        # use split because it is easy to type than ['One', 'Two', ...]
+        lessThan20 = 'One Two Three Four Five Six Seven Eight Nine Ten ' \
         'Eleven Twelve Thirteen Fourteen Fifteen Sixteen Seventeen Eighteen Nineteen'.split(" ")
         tens = 'Ten Twenty Thirty Forty Fifty Sixty Seventy Eighty Ninety'.split(" ")
-        thousands = ' Thousand Million Billion'.split(" ")
+        thousands = ' Thousand Million Billion'.split(" ") # space at the begining is important
 
         def helper(num): # recursively handle the number < 1000
-            print num
             if not num:
                 return ""
             elif num < 20:
@@ -24,6 +24,7 @@ class Solution(object):
         words = ''
         i = 0 # count the thousands
 
+        # calculate the num from the least important digits
         while num > 0:
             if num % 1000 > 0:
                 words = helper(num % 1000) + thousands[i] + " " + words
@@ -31,7 +32,7 @@ class Solution(object):
             i += 1
         return words.strip()
         
-    
+
 
 s = Solution()
 # print s.numberToWords(123456)

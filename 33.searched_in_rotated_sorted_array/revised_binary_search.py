@@ -13,7 +13,7 @@ class Solution(object):
             if arr[mid] == target:
                 return mid
             if arr[lo] <= arr[mid]: # if the left is sorted
-                if arr[lo] <= target and target < arr[mid]: # in the left
+                if arr[lo] <= target and target < arr[mid]: # in the left, target could equal to arr[lo]
                     hi = mid - 1
                 else: # in the right
                     lo = mid + 1

@@ -17,10 +17,10 @@ class Codec:
             if node: #not null for node
                 queue.append(node.left)
                 queue.append(node.right)
-                res.append(str(node.val))
+                res.append(str(node.val)) # turn to string
             else:
                 res.append("#")
-        return " ".join(res)
+        return " ".join(res) # not res.join(""), also use a space to seperate node
 
 
     def deserialize(self, data):
@@ -32,8 +32,7 @@ class Codec:
         if not data or data == "#":
             return None
         nodelist = data.split(" ")
-        print nodelist
-        root = TreeNode(nodelist.pop(0))
+        root = TreeNode(nodelist.pop(0)) # set to the treenode
         queue = [root]
         while nodelist:
             parent = queue.pop(0)

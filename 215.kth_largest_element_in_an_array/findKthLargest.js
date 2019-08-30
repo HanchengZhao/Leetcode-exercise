@@ -41,7 +41,7 @@ var quickSelect = function(nums, start, end, k) {
     if (start + k - 1 >= left) {
         return quickSelect(nums, left, end, k - (left - start));
     }
-    return nums[right + 1];
+    // return nums[right + 1];
 };
 
 console.log(findKthLargest([3,2,1,5,6,4], 6));

@@ -41,8 +41,8 @@ class Solution(object):
                 exp = True
                 numAfterE = False
             else:
-                return False # orthe char
-        return num and numAfterE
+                return False # other char
+        return num and numAfterE # at least 1 number 
 s = Solution()
 # print s.isNumber('.1')
 print s.isNumber('1 ')

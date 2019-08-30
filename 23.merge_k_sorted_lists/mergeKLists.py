@@ -28,3 +28,7 @@ class Solution(object):
                 n = n.next
                 heapq.heappush(pq, (n.val, n))
         return dummy.next
+
+'''
+Olog(k)
+'''

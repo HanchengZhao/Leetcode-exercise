@@ -17,7 +17,7 @@ class Solution(object):
         :type head: ListNode
         :rtype: TreeNode
         """
-        # the idea is to find the mid
+        # the idea is to find the mid then construct from 
         if not head:
             return
         if not head.next:
@@ -30,6 +30,6 @@ class Solution(object):
             fast = fast.next.next
         root = TreeNode(slow.next.val)
         root.right = self.sortedListToBST(slow.next.next)
-        slow.next = None
+        slow.next = None # break the linkedlist
         root.left= self.sortedListToBST(head)
         return root

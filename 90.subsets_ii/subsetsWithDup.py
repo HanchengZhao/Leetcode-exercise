@@ -26,3 +26,18 @@ s = Solution()
 print s.subsetsWithDup([4,4,4,1,4])
 
 # [4,4,4,1,4]
+
+class Solution2(object):
+    def subsetsWithDup(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        nums.sort()
+        res = [[]]
+        for i in nums:
+            for j in res[:]:
+                if ([i] + j) not in res:
+                    res += [[i] + j]
+        return res
+        

@@ -20,6 +20,6 @@ class Solution(object):
             nums[x] = y # set the parent
         # in the end, if there is no cycle and there n-1 edges, all node will be connected
         return len(edges) == n-1 
-        
+# time: O(v*e) (69ms)
 
     

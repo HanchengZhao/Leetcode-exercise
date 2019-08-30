@@ -37,11 +37,11 @@ class LRUCache(object):
         :rtype: void
         """
         if key in self.dic:
-            self._remove(self.dic[key])
+            self._remove(self.dic[key]) # remove it if existed
         n = ListNode(key, value)
-        self._add(n)
+        self._add(n) # add to the tail
         self.dic[key] = n
-        if len(self.dic) > self.capacity:
+        if len(self.dic) > self.capacity: # remove head
             n = self.head.next
             self._remove(n)
             del self.dic[n.key]
