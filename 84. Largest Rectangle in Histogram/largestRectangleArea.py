@@ -22,6 +22,7 @@ class Solution:
                 # height and width
                 area = top[1] * (i - stack[-1][0] - 1)
                 maxArea = max(area, maxArea)
+            # CAREFUL: don't forget to append
             stack.append((i, heights[i]))
         # now we only have an increasing stack
         # rightBound would be fixed to the index of last element in the stack + 1
