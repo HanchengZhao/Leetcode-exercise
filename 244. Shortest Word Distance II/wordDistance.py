@@ -20,3 +20,13 @@ class WordDistance:
             else:
                 j += 1
         return shortest
+
+
+'''
+time: 
+    - build map: O(N), N is the number of words
+    - find time: O(max(word1, word2))
+space:
+    O(n), n is the number of words.
+topic: hashtable, string, 2 pointer
+'''
