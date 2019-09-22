@@ -11,7 +11,7 @@ class Solution:
         # backtrack to see if the city would be the good choice
         # otherwise append it back to try other cities
         # the first path it returns will be the lowerst in lexical order
-        def dfs(city="JFK"):
+        def dfs(city):
             if len(self.path) == len(tickets) + 1:
                 return self.path
             nxtTrips = sorted(self.trips[city])
@@ -23,4 +23,4 @@ class Solution:
                     return worked
                 self.trips[city].append(nxt)
                 self.path.pop()
-        return dfs()
+        return dfs("JFK")
