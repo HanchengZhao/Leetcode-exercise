@@ -20,38 +20,36 @@ class Solution(object):
         dot = False
         exp = False
         sign = False
-        s = s.strip() # remove spaces for both end
+        s = s.strip()  # remove spaces for both end
         for i in xrange(len(s)):
             if s[i] == ' ':
-                return False # no space in the midlle
+                return False  # no space in the middle
             elif s[i] == '+' or s[i] == '-':
-                if i > 0 and s[i-1] != 'e': # if not after 'e'
+                if i > 0 and s[i-1] != 'e':  # if not after 'e'
                     return False
                 sign = True
             elif s[i].isdigit():
                 num = True
                 numAfterE = True
             elif s[i] == '.':
-                if dot or exp: # '.' or e appeard before
+                if dot or exp:  # '.' or e appeard before
                     return False
                 dot = True
             elif s[i] == 'e':
-                if exp or not num: # e appeared before or no number before it
+                if exp or not num:  # e appeared before or no number before it
                     return False
                 exp = True
                 numAfterE = False
             else:
-                return False # other char
-        return num and numAfterE # at least 1 number 
+                return False  # other char
+        return num and numAfterE  # at least 1 number
+
+
 s = Solution()
 # print s.isNumber('.1')
 print s.isNumber('1 ')
-        
-        
-        
-        
-        
-        
+
+
 '''
 # python trick
 try:

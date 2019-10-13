@@ -5,6 +5,8 @@ For example, Given s = “eceba” and k = 2,
 
 T is "ece" which its length is 3.
 '''
+
+
 class Solution(object):
     def lengthOfLongestSubstringKDistinct(self, s, k):
         """
@@ -22,3 +24,8 @@ class Solution(object):
                 low += 1
             res = max(res, i - low + 1)
         return res
+
+
+'''
+Time complexity of this is O(nk), because it takes O(k) to find the low index
+'''

@@ -9,7 +9,6 @@ class Solution:
                 if s[i] == s[i-1] and not removed:
                     dupcount += 1
                     if dupcount == k:
-                        # print("ns: ", ns)
                         ns = ns[:-dupcount]
                         removed = True
                         dupcount = 1

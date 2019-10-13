@@ -27,7 +27,6 @@ var pacificAtlantic = function(matrix) {
 
 function dfs(matrix, i, j, visited, m, n) {
   const directions = [[-1, 0], [0, 1], [0, -1], [1, 0]];
-  console.log(i, j);
   visited[i][j] = true;
   for (let d of directions) {
     let nx = i + d[0],
@@ -46,6 +45,6 @@ function dfs(matrix, i, j, visited, m, n) {
   }
 }
 
-console.log(
-  pacificAtlantic([[3, 3, 3, 3, 3, 3], [3, 0, 3, 3, 0, 3], [3, 3, 3, 3, 3, 3]])
-);
+// the idea is to start from each ocean, do a dfs to see which
+// areas will be flooded by water. Then check which areas can
+// flow into both oceans.
